@@ -6,7 +6,9 @@ const fetchCharacters = async (url_API) => {
         await fetchData(url_API)
                 .then(data => {
                     data.results.map(result => charactersData.push(result))
-                    showCharacters(charactersData)
+                    console.log(charactersData)
+                    createInput();
+                    showCharacters(5)
                 })
                 .catch(error => console.error(new Error('Some error ocurrs' + error)))
     }catch(err){
@@ -14,18 +16,82 @@ const fetchCharacters = async (url_API) => {
     }
 }
 
-const showCharacters = (characters) => {
-    $(
-        `       
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+const showCharacters = (charactersNumber) => {
+    let characters = [];
+    for (let i = 0; i < charactersNumber; i++) {characters.push(charactersData[i])}
+    $('.col').empty();
+    for (let i = 0; i < charactersNumber; i++) {
+      if(characters[i].status === 'Alive'){
+        $(
+          `   
+          <div class="character-container__card">
+          <div class="character-container__card--img">
+              <img src="${characters[i].image}" alt="" srcset="">
+          </div>
+          <div class="character-container__card--description">
+              <h3>${characters[i].name}</h3>
+              <ul>
+                  <li><b>Gender:</b> ${characters[i].gender}</li>
+                  <li><b>Origin:</b> ${characters[i].origin.name}</li>
+                  <li><b>Status:</b> <button class="status__alive">${characters[i].status}</button></li>
+              </ul>
+          </div>
+      </div>
+        `
+      ).appendTo('.col');
+      }else if(characters[i].status === 'Dead'){
+        $(
+          `   
+          <div class="character-container__card">
+          <div class="character-container__card--img">
+              <img src="${characters[i].image}" alt="" srcset="">
+          </div>
+          <div class="character-container__card--description">
+              <h3>${characters[i].name}</h3>
+              <ul>
+                  <li><b>Gender:</b> ${characters[i].gender}</li>
+                  <li><b>Origin:</b> ${characters[i].origin.name}</li>
+                  <li><b>Status:</b> <button class="status__dead">${characters[i].status}</button></li>
+              </ul>
+          </div>
+      </div>
+        `
+      ).appendTo('.col');
+      }else if(characters[i].status === 'unknown'){
+        $(
+          `   
+          <div class="character-container__card">
+          <div class="character-container__card--img">
+              <img src="${characters[i].image}" alt="" srcset="">
+          </div>
+          <div class="character-container__card--description">
+              <h3>${characters[i].name}</h3>
+              <ul>
+                  <li><b>Gender:</b> ${characters[i].gender}</li>
+                  <li><b>Origin:</b> ${characters[i].origin.name}</li>
+                  <li><b>Status:</b> <button class="status__unknown">${characters[i].status}</button></li>
+              </ul>
+          </div>
+      </div>
+        `
+      ).appendTo('.col');
+      }    
+    }
+}
+const createInput = () => {
+  for (let i = 1; i <= charactersData.length; i++) {
+    $('#options__charactersNumber').append(
       `
-    ).appendTo('#characters');
+      <option value="${i}">${i}</option>
+      `
+    )
+  }
+}
+const readInputValue = () => {
+  $('#options__charactersNumber').change(function() {
+    let value = $('#options__charactersNumber option:selected').text()
+    showCharacters(value)
+  });
 }
 fetchCharacters(API)
+readInputValue()
