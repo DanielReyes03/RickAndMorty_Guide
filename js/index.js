@@ -24,7 +24,7 @@ const showCharacters = (charactersNumber) => {
       if(characters[i].status === 'Alive'){
         $(
           `   
-          <div class="character-container__card">
+          <div class="character-container__card reveal">
           <div class="character-container__card--img">
               <img src="${characters[i].image}" alt="" srcset="">
           </div>
@@ -42,7 +42,7 @@ const showCharacters = (charactersNumber) => {
       }else if(characters[i].status === 'Dead'){
         $(
           `   
-          <div class="character-container__card">
+          <div class="character-container__card reveal">
           <div class="character-container__card--img">
               <img src="${characters[i].image}" alt="" srcset="">
           </div>
@@ -60,7 +60,7 @@ const showCharacters = (charactersNumber) => {
       }else if(characters[i].status === 'unknown'){
         $(
           `   
-          <div class="character-container__card">
+          <div class="character-container__card reveal">
           <div class="character-container__card--img">
               <img src="${characters[i].image}" alt="" srcset="">
           </div>
