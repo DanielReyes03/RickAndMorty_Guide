@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #D5E5EE !important;
 }
 
 header {
@@ -55,6 +55,7 @@ header h1 {
     display: flex;
     text-align: left;
     border: none;
+    transition: 0.3s ease-in-out !important;
 }
 
 .character-container__card .character-container__card--img {
@@ -82,7 +83,10 @@ header h1 {
 .character-container__card:nth-child(even) {
     float: right;
 }
-
+.character-container__card:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 .status__alive {
     width: 70px;
     border-radius: 30px;
@@ -133,7 +137,7 @@ header h1 {
 }
 .options__display{
     position: fixed;
-    bottom: 160px;
+    bottom: 225px;
     right: 300px;
     z-index: 99;
     border: none;
@@ -165,7 +169,6 @@ header h1 {
     left: 0;
     z-index: 999999;
 }
-
 @media only screen and (max-width: 600px){
     header{
         background-position: center;

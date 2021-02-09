@@ -1,12 +1,13 @@
 import {fetchData} from './utils/getData.js'
-const API = 'https://rickandmortyapi.com/api/character/';
-const charactersData = []
+const API = `https://rickandmortyapi.com/api/character`;
+let charactersData = []
 const fetchCharacters = async (url_API) => {
     try{
         await fetchData(url_API)
                 .then(data => {
-                    data.results.map(result => charactersData.push(result))
+                    charactersData = [];
                     console.log(charactersData)
+                    data.results.map(result => charactersData.push(result))
                     createInput();
                     showCharacters(5)
                 })
@@ -79,6 +80,7 @@ const showCharacters = (charactersNumber) => {
     }
 }
 const createInput = () => {
+  $('#options__charactersNumber').empty()
   for (let i = 1; i <= charactersData.length; i++) {
     $('#options__charactersNumber').append(
       `
@@ -93,5 +95,13 @@ const readInputValue = () => {
     showCharacters(value)
   });
 }
-fetchCharacters(API)
+const readPageValue = () => {
+  $('#options__pageNumber').change(function() {
+    let value = $('#options__pageNumber option:selected').text()
+    $('.col').empty();
+    fetchCharacters(API+`?page=${value}`)
+  });
+}
+fetchCharacters(API+'?page=1')
 readInputValue()
+readPageValue()
