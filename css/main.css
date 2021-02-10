@@ -277,11 +277,31 @@ footer .footer__bg{
 }
 @media only screen and (max-width: 600px){
     header{
-        background-position: center;
+        background:  linear-gradient(0deg, rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.281)), url(../assets/prinicpal__banner.png);
+        background-position: right;
         object-fit: cover;
     }
     header h1{
-        font-size: 3em;
+        font-size: 3.5em;
+    }
+    header .header__hr{
+        height: 6px !important;
+        width: 60% !important;
+        color: white;
+        opacity: 1;
+    }
+    header .header__description{
+        padding-top: 100px;
+        padding-left: 0;
+        width: auto;
+    }
+    header .header__description p {
+        font-weight: bold;
+        text-align: justify;
+        font-size: 1.5em;
+    }
+    .characters h1{
+        font-size: 4em;
     }
     .character-container__card{
         width: auto;
@@ -301,5 +321,12 @@ footer .footer__bg{
     .character-container__card .character-container__card--description{
         text-align: justify;
         line-height: 2em;
+    }
+    .howTo .howTo__steps .howTo__steps--circle{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .howTo .howTo__steps .howTo__steps--btn{
+        margin-top: 35px;
     }
 }
