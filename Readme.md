@@ -1,6 +1,6 @@
 # Rick and Morty Guide
 
-Image
+[![](https://github.com/DanielReyes03/RickAndMorty_Guide/blob/master/repoImages/banner.png)](http://https://github.com/DanielReyes03/RickAndMorty_Guide/blob/master/repoImages/banner.png)
 
 ### ¿How to use? 🤔
                 
