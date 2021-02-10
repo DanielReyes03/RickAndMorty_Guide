@@ -14,36 +14,56 @@
 }
 
 body {
-    background-color: #D5E5EE !important;
+    background-color: white !important;
 }
 
 header {
-    background: linear-gradient(var(--image-shadow)), url('../assets/prinicpal__banner.png');
+    background: url('../assets/prinicpal__banner.png');
     width: 100%;
-    height: 200px;
+    height: 100vh;
     background-position: center;
 }
 
 header h1 {
     color: white;
-    font-size: 4em;
+    font-size: 5em;
     font-weight: bold;
     text-decoration: none;
-    padding-left: 51px;
+    padding-left: 12%;
     padding-top: 50px;
 }
-
+header .header__hr{
+    height: 6px !important;
+    width: 50% !important;
+    color: white;
+    margin-left: 18%;
+    opacity: 1;
+}
+header .header__description{
+    padding-top: 150px;
+    padding-left: 12%;
+    width: 700px;
+}
+header .header__description p {
+    font-weight: bold;
+    text-align: justify;
+    font-size: 1.7em;
+}
 .characters {
     width: 100%;
     height: auto;
 }
 
 .characters h1 {
-    font-size: 3.9em;
-    font-weight: 700;
-    color: #333;
+    font-size: 5em;
+    font-weight: bold;
+    color: #001F3F;
 }
-
+.characters p {
+    color: #001F3F;
+    font-size: 1.3em;
+    font-weight: medium;
+}
 .character-container__card {
     background-color: rgb(22, 33, 42) !important;
     color: white;
@@ -144,21 +164,53 @@ header h1 {
 	transform: scale(1);
 	animation: pulse 2s infinite;
 }
-@keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-	}
 
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-	}
+.howTo{
+    width: 100%;
+    height: auto;
+    background-color: #001F3F;
+    padding-bottom: 50px;
+}
+.howTo .howTo__title{
+    font-size: 4.3em;
+    font-weight: bold;
+    padding-top: 50px;
+}
+.howTo .howTo__steps{
+    margin-top: 100px;
+}
 
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
+.howTo .howTo__steps .howTo__steps--circle{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    margin-left: 50px;
+}
+.howTo .howTo__steps .howTo__steps--circle span{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.howTo .howTo__steps > span {
+    color: white;
+    font-size: 20pt;
+    width: 900px;
+    display: inline;
+}
+.howTo .howTo__steps .howTo__steps--btn{
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px !important;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+}
+.howTo .howTo__steps .howTo__steps--btn:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .options__display{
     position: fixed;
@@ -198,7 +250,22 @@ footer .card .card-footer a{
     color: rgb(77, 91, 212);
     text-decoration: none;
 }
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
 
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
 @media only screen and (max-width: 600px){
     header{
         background-position: center;

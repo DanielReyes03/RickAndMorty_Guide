@@ -1,39 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty Guide</title>
     <link rel="stylesheet" href="./css/main.css">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
+
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="d-flex justify-content-center align-items-center flex-column h-75">
             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_Gh0AU0.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
             Loading ...
         </div>
-    </div>
-    <header class="text-left">
-        <h1>Rick And Morty Guide</h1>
+    </div> -->
+    <header class="header">
+        <h1>Rick and Morty Guide</h1>
+        <hr class="header__hr">
+        <div class="header__description text-white">
+            <p>
+                The rick and morty guide is a project created to be able to know the characters of this series and also
+                to know how this project was created. Swipe down to meet them all
+            </p>
+        </div>
     </header>
     <section class="characters">
-        <h1 class="text-center mt-5 mb-5 text-black-50">Characters</h1>
+        <h1 class="text-center mt-5 mb-2">Characters</h1>
+        <p class="text-center">Know the principal characters</p>
         <!-- Character Container -->
-        <div class="character-container container">
+        <div class="character-container container mt-5">
             <!-- Character Row -->
             <div class="row">
                 <!-- character column -->
                 <div class="col">
-                    
+
                     <!-- character card -->
                     <!-- character card -->
                 </div>
             </div>
         </div>
         <!-- Character Container -->
+    </section>
+    <section class="howTo">
+        <h1 class="text-center text-white howTo__title">¿How I do this?</h1>
+        <div class="howTo__steps container">
+            <div class="row mb-5">
+               <div class="col-sm-4">
+                <p class="text-white d-inline">
+                    <div class="howTo__steps--circle">
+                        <span>1</span>
+                    </div>
+                </p>
+               </div>
+               <div class="col-sm-8 text-white">
+                <h4>
+                    You need to make requests to the official Rick and morty API and get all the characters 👨‍💻
+                </h4>
+               </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-sm-4">
+                 <p class="text-white d-inline">
+                     <div class="howTo__steps--circle">
+                         <span>2</span>
+                     </div>
+                 </p>
+                </div>
+                <div class="col-sm-8 text-white">
+                 <h4>
+                     You can use javascript to be able to make requests to the api and obtain all the data 🚀
+                    </h4>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-sm-4">
+                 <p class="text-white d-inline">
+                     <div class="howTo__steps--circle">
+                         <span>3</span>
+                     </div>
+                 </p>
+                </div>
+                <div class="col-sm-8 text-white">
+                 <h4>Finally you need creativity and a lot of desire to learn. 🎉</h4>
+                </div>
+             </div>
+
+             <div class="text-center">
+                <a href="https://github.com/DanielReyes03/RickAndMorty_Guide" class="btn btn-light howTo__steps--btn text-center" >
+                    See code here
+                 </a>
+             </div>
+        </div>
     </section>
 
     <div class="options__container">
@@ -44,21 +106,23 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-subtitle mb-3">Number Of Characters to display:</h5>
-                    <select name="" id="options__charactersNumber" class="custom-select mb-3" >
+                    <span class="text-muted">By default we desplay 5 characters</span>
+                    <select name="" id="options__charactersNumber" class="custom-select mb-3">
                         <option selected disabled>Choose...</option>
                     </select>
                     <h5 class="card-subtitle mb-3">Page of Character to display:</h5>
-                    <select name="" id="options__pageNumber" class="custom-select" >
+                    <select name="" id="options__pageNumber" class="custom-select">
                         <option selected disabled>Choose...</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
+
                 </div>
             </div>
         </div>
     </div>
-    <footer>
+    <!-- <footer>
         <div class="card text-center">
             <div class="card-body">
               <h4 class="card-title">Rick And morty guide</h4>
@@ -68,7 +132,7 @@
               Made with ❤️ by <a href="https://fredy-647f4.web.app/">Fredy</a>
             </div>
           </div>
-    </footer>
+    </footer> -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
@@ -76,5 +140,8 @@
 <script src="./js/utils/options.js"></script>
 <script src="./js/index.js" type="module" defer></script>
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
 </html>
