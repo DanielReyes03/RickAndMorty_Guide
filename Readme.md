@@ -1,6 +1,6 @@
 # Rick and Morty Guide
 
-[![](https://github.com/DanielReyes03/RickAndMorty_Guide/blob/master/repoImages/banner.png)](http://https://github.com/DanielReyes03/RickAndMorty_Guide/blob/master/repoImages/banner.png)
+[![]([![](http://https://github.com/DanielReyes03/RickAndMorty_Guide/blob/master/repoImages/banner.png)](http://https://github.com/DanielReyes03/RickAndMorty_Guide))](https://danielreyes03.github.io/RickAndMorty_Guide/)
 
 ### ¿How to use? 🤔
                 
