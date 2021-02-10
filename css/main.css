@@ -250,6 +250,15 @@ footer .card .card-footer a{
     color: rgb(77, 91, 212);
     text-decoration: none;
 }
+footer .footer__bg{
+    background-color: #001F3F;
+    border-radius: 0;
+    border: none;
+}
+.card-footer{
+    border-top: 0 !important;
+    border-radius: 0 !important;
+}
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
