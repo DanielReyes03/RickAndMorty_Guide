@@ -2,7 +2,7 @@
 
 Image
 
-###¿How to use? 🤔
+### ¿How to use? 🤔
                 
 ----
 This project is a small guide to the characters of the Rick and Morty series. In order to see more characters you must click on the options button in your lower right corner and press the number of characters you want to see. 🚀
